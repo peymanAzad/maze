@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maze</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/maze.js"></script>
+</head>
+<body>
+<div id="gamecontainer" style="background-color: lightcyan;">
+
+    <div class="gamelayer" id="gamescreen">
+        <img id="returnBtn" src="img/icons/return.png" alt="return to main menu" onclick="game.restart();">
+        <canvas id="gamecanvas" width="800" height="600">
+            Ops! Your browser doesn't support html5 canvas
+        </canvas>
+    </div>
+
+
+    <div id="gamestartscreen" class="gamelayer">
+        <h1>Maze</h1>
+        <img src="img/icons/play.png" alt="Play Game" onclick = "game.play();"><br>
+        <img src="img/icons/settings.png" alt="Settings" onclick = "game.showSettingsScreen();">
+    </div>
+
+    <div id="settingscreen" class="gamelayer">
+        <div id="settings">
+                <h2>Settings</h2>
+                <div class="form-field">
+                    <div><label for="xNumber">Size X</label></div>
+                    <input type="number" id="xNumber">
+                </div>
+                <div class="form-field">
+                    <div><label for="yNumber">Size Y</label></div>
+                    <input type="number" id="yNumber">
+                </div>
+                <div class="form-field">
+                    <div><label for="dencity">Density</label></div>
+                    <input type="number" id="dencity">
+                </div>
+                <div style="margin-top: 50px;">
+                    <div>
+                        <img src="img/icons/playgame.png" alt="next" onclick = "game.play();">
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <div id="endingscreen" class="gamelayer">
+        <div>
+            <p id="endingmessage">The Level Is Over Message</p>
+            <p id="playcurrentlevel"><img src="img/icons/prev.png"> Replay Current Level</p>
+            <p id="showLevelScreen"><img src="img/icons/return.png"> Play Again</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
